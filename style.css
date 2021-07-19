@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+body{
+    box-sizing: border-box;
+    background-color: rgb(240, 240, 240);
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px auto 150px;
+    grid-template-areas: 
+    "nav nav nav"
+    "side main section"
+    "side main section";
+}
+
+/* navbar */
+nav{
+    grid-area: nav;
+    padding: 1px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+/* left nav */
+.left-nav{
+    display: flex;
+    list-style: none;
+    padding: 0 25px;
+}
+.left-nav li{
+    padding: 10px;
+}
+.left-nav img{
+    width: 38px;
+    border-radius: 3px;
+    background-color: rgba(255, 105, 155, 0.541);
+    transform: rotate(-10deg);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+.left-nav img:hover{
+    background-color: rgba(255, 4, 129, 0.466);
+    box-shadow: 0px 1px 4px 1px grey;
+    transform: rotate(0);
+}
+.left-nav input{
+    border: 0px solid grey;
+    border-radius: 50px;
+    padding: 10px 18px;
+    background: url(./images/mic.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 34px;
+    background-color: rgb(238, 238, 238);
+    letter-spacing: 1px;
+    margin: 0 5px;
+}
+.left-nav input:hover{
+    box-shadow: 1px 1px 3px 0px gray;
+}
+
+/* center nav */
+.center-nav{
+    display: flex;
+    justify-content: center;
+}
+.center-nav img{
+    width: 28px;
+    padding:0 35px; 
+    cursor: pointer;
+}
+.home{
+    border-bottom: 3px solid black;
+}
+.center-nav img:hover{
+    background-color: rgb(231, 231, 231);
+    margin: 5px 15px;
+    border-radius: 8px;
+}
+#home:hover{
+    background-color: white;
+    margin: 0;
+    border-radius: 0;
+}
+
+/* right nav */
+.right-nav{
+    display: flex;
+    margin: 0 15px;
+    justify-content: center;
+    align-items: center;
+}
+.right-nav img{
+    width: 27px;
+    padding: 0 8px;
+    cursor: pointer;
+}
+#menu{
+    width: 21px;
+}
+#menu:hover{
+    box-shadow: -1px 1px 4px 2px rgb();
+}
+#noti{
+    width: 40px;
+}
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+    cursor: pointer;
+}
+.profile:hover{
+    background-color: rgb(231, 231, 231);
+    border-radius: 45px;
+    padding: 2px 2px;
+}
+.name{
+    padding: 0 6px;
+}
+#profile-pic{
+    border-radius: 50%;
+    border: none;  
+}
+.online{
+    position: relative;
+}
+.online::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: #42db51;
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+
+
+
+/* ********side-bar********** */
+
+aside{
+    grid-area: side;
+    padding: 0 10px;
+    position: fixed;
+    top: 9%;
+    display: flex;
+    flex-direction: column;
+}
+.imp-links a{
+    display: flex;
+    padding: 12px;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+    font-weight: 15px;
+    letter-spacing: 1px;
+    transition: all 0.4s ease-in;
+}
+.imp-links a:hover{
+    background-color: rgb(219, 219, 219);
+    border-radius: 8px; 
+}
+.size{
+    width: 30px;
+    margin-right: 15px;
+}
+#size{
+    width: 37px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+
+/* *****your Shortcut******* */
+
+.your-shortcut{
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 65px; */
+}
+.heading{
+    border-top: 1px solid rgba(189, 189, 189, 0.774);
+    margin-top: 10px;
+    padding-top: 17px;
+    padding-left: 12px;
+    color: rgb(87, 86, 86);
+    letter-spacing: 1px;
+}
+.your-shortcut a{
+    display: flex;
+    margin: 20px;
+    align-content: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: black;
+}
+.your-shortcut a p{
+    margin-right: 10px;
+    background-color: rgb(194, 17, 194);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin-left: 8px;
+}
+.your-shortcut a:hover{
+    background-color: rgb(219, 219, 219);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+
+
+section{
+    grid-area: section;
+}
+
