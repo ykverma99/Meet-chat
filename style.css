@@ -9,7 +9,7 @@ body{
 }
 .container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr  3fr 1fr;
     grid-template-rows: 50px auto 150px;
     grid-template-areas: 
     "nav nav nav"
@@ -23,7 +23,6 @@ nav{
     padding: 1px;
     position: sticky;
     top: 0;
-    z-index: 100;
 }
 .nav-container{
     display: flex;
@@ -44,14 +43,14 @@ nav{
     width: 38px;
     border-radius: 3px;
     background-color: rgba(255, 105, 155, 0.541);
-    transform: rotate(-10deg);
+    transform: rotate(-20deg);
     transition: all 0.4s ease;
     cursor: pointer;
 }
 .left-nav img:hover{
     background-color: rgba(255, 4, 129, 0.466);
     box-shadow: 0px 1px 4px 1px grey;
-    transform: rotate(0);
+    transform: rotate(360deg);
 }
 .left-nav input{
     border: 0px solid grey;
@@ -76,7 +75,7 @@ nav{
 }
 .center-nav img{
     width: 28px;
-    padding:0 35px; 
+    padding:0 40px; 
     cursor: pointer;
 }
 .home{
@@ -96,13 +95,14 @@ nav{
 /* right nav */
 .right-nav{
     display: flex;
-    margin: 0 15px;
+    /* margin: 0 35px; */
     justify-content: center;
     align-items: center;
+    margin-right: 45px;
 }
 .right-nav img{
     width: 27px;
-    padding: 0 8px;
+    padding: 0 10px;
     cursor: pointer;
 }
 #menu{
@@ -131,7 +131,7 @@ nav{
 }
 #profile-pic{
     border-radius: 50%;
-    border: none;  
+    border: none; 
 }
 .online{
     position: relative;
@@ -222,11 +222,43 @@ aside{
     border-radius: 10px;
     padding: 20px;
 }
+main{
+    grid-area: main;
+}
 
-
-
+/* **************right-sideBar*************** */
 
 section{
     grid-area: section;
+    display: flex;
+    flex-direction: column;
+    margin-top: 9%; 
 }
 
+.right-heading h4{
+    color: grey;
+    margin-bottom: 20px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    font-size: large;
+    text-transform: capitalize;
+}
+.sponserd a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    margin-right: 15px;
+}
+.sponserd a img{
+    width: 28%;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+.sponserd a:hover{
+    border-radius: 10px;
+    background-color: rgb(219, 219, 219);
+}
