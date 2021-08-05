@@ -130,7 +130,8 @@ nav{
 }
 #profile-pic{
     border-radius: 50%;
-    border: none; 
+    border: none;
+    object-fit: cover; 
 }
 .online{
     position: relative;
@@ -182,6 +183,7 @@ aside{
     width: 37px;
     border-radius: 50%;
     margin-right: 15px;
+    object-fit: cover;
 }
 
 
@@ -329,6 +331,8 @@ section{
 /* **************main***************** */
 main{
     grid-area: main;
+    display: flex;
+    flex-direction: column;
 }
 .story-grid{
     display: grid;
@@ -398,4 +402,72 @@ story{
     opacity: 1;
     pointer-events: all;
     transform: translateY(0);
+}
+.feeling{
+    background-color: white;
+    margin-top: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.mind{
+    display: flex;
+    margin: 15px;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    padding-bottom: 15px;
+    position: relative;
+}
+.mind img{
+    width: 38px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.mind ul{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color:rgba(0, 0, 0, 0.199);
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+.mind ul:hover{
+    opacity: 1;
+}
+.mind img:hover + ul{
+    opacity: 1;
+    pointer-events: all;
+}
+.mind input{
+    width: 100%;
+    border-radius: 50px;
+    padding: 10px;
+    border: 1px solid rgb(211, 211, 211);
+    background-color: rgb(226, 229, 235);
+    letter-spacing: 0.7px;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    transition: all 0.4s ease;
+}
+.mind input:hover{
+    background-color: rgb(233, 231, 231);
+}
+
+.img-feeling{
+    display: flex;
+    padding-bottom: 5px;
+    justify-content: space-evenly;
+}
+.img-cont{
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+.img-cont img{
+    width: 30px;
+}
+.img-cont:hover{
+    background-color: rgb(238, 238, 238);
 }
