@@ -328,7 +328,7 @@ section{
     margin-right: 20px;
 }
 
-/* **************main***************** */
+/* ************** main ***************** */
 main{
     grid-area: main;
     display: flex;
@@ -470,4 +470,40 @@ story{
 }
 .img-cont:hover{
     background-color: rgb(238, 238, 238);
+}
+.room{
+    display: flex;
+    margin-top: 15px;
+    background-color: #fff;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+.room-create{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.room-create img{
+    width: 30px;
+    object-fit: cover;
+    padding-right: 12px;
+    position: absolute;
+    left: 12px;
+}
+.room-create input{
+    text-align: right;
+    padding: 8px;
+    width: 120px;
+    border-radius: 50px;
+    border: rgb(189,189,189);
+    background-color: rgb(233, 231, 231);
+    color: red;
+}
+.room-create::placeholder{
+    color: red;
+}
+.online-list img{
+    width: 35px;
+    border-radius: 50%;
 }
