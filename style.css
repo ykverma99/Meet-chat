@@ -432,6 +432,7 @@ story{
     transition: all 0.4s ease;
     pointer-events: none;
 }
+
 .mind ul:hover{
     opacity: 1;
 }
@@ -506,4 +507,8 @@ story{
 .online-list img{
     width: 35px;
     border-radius: 50%;
+}
+.image-links{
+    display: flex;
+    align-items: center;
 }
