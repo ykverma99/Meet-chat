@@ -308,8 +308,8 @@ section{
     border: 2px solid #fff;
     border-radius: 50%;
     background-color: #42db51;
-    bottom: 5px;
-    left: 29px;
+    bottom: 9px;
+    left: 35px;
 }
 .online-freindes{
     position: relative;
@@ -317,6 +317,8 @@ section{
     align-items: center;
     margin-bottom: 20px;
     cursor: pointer;
+    padding: 7px;
+    transition: all 0.4s ease;
 }
 .online-freindes .online-freindes-img img{
     width: 40px;
@@ -326,6 +328,11 @@ section{
     width: 40px;
     border-radius: 50%;
     margin-right: 20px;
+}
+.online-freindes:hover{
+    background-color: rgb(218, 218, 218);
+    border-radius: 10px;
+    
 }
 
 /* ************** main ***************** */
@@ -497,12 +504,16 @@ story{
     padding: 8px;
     width: 120px;
     border-radius: 50px;
-    border: rgb(189,189,189);
-    background-color: rgb(233, 231, 231);
-    color: red;
+    border: 1px solid rgb(189,189,189);
+    background-color: transparent; 
 }
-.room-create::placeholder{
+.room-create input::placeholder{
     color: red;
+    background: url();
+}
+.room-create:hover{
+    background-color: rgba(241, 236, 236, 0.877);
+    border-radius: 50px;
 }
 .online-list img{
     width: 35px;
@@ -511,4 +522,37 @@ story{
 .image-links{
     display: flex;
     align-items: center;
+}
+.online-list{
+    position: relative;
+    cursor: pointer;
+}
+.online-list::after{
+    content: '';
+    position: absolute;
+    height: 7px;
+    width: 7px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: #42db51;
+    bottom: 3px;
+    left: 27px;
+}
+.online-list ul{
+    position: absolute;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.199);
+    width: 34px;
+    border-radius: 50%;
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+.online-list ul:hover{
+    opacity: 1;
+}
+.online-list img:hover + ul{
+    opacity: 1;
+    pointer-events: all;
 }
