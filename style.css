@@ -23,6 +23,7 @@ nav{
     padding: 1px;
     position: sticky;
     top: 0;
+    z-index: 3;
 }
 .nav-container{
     display: flex;
@@ -340,7 +341,6 @@ main{
     grid-area: main;
     display: flex;
     flex-direction: column;
-    z-index: -2;
 }
 .story-grid{
     display: grid;
@@ -411,6 +411,9 @@ story{
     pointer-events: all;
     transform: translateY(0);
 }
+
+
+/* ************** feelings************** */
 .feeling{
     background-color: white;
     margin-top: 15px;
@@ -429,7 +432,7 @@ story{
     border-radius: 50%;
     margin-right: 10px;
 }
-.mind ul{
+.bllk{
     width: 38px;
     height: 38px;
     border-radius: 50%;
@@ -441,10 +444,10 @@ story{
     pointer-events: none;
 }
 
-.mind ul:hover{
+.bllk:hover{
     opacity: 1;
 }
-.mind img:hover + ul{
+.mind img:hover + .bllk{
     opacity: 1;
     pointer-events: all;
 }
@@ -510,7 +513,6 @@ story{
     border: 1px solid rgb(189,189,189);
     background-color: transparent; 
     cursor: pointer;
-
 }
 .room-create input::placeholder{
     color: red;
@@ -542,7 +544,7 @@ story{
     bottom: 3px;
     left: 27px;
 }
-.online-list ul{
+.online-list .blkk{
     position: absolute;
     height: 35px;
     background-color: rgba(0, 0, 0, 0.199);
@@ -553,10 +555,10 @@ story{
     pointer-events: none;
     transition: all 0.4s ease;
 }
-.online-list ul:hover{
+.blkk:hover{
     opacity: 1;
 }
-.online-list img:hover + ul{
+.online-list img:hover + .blkk{
     opacity: 1;
     pointer-events: all;
 }
@@ -582,28 +584,27 @@ story{
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 0.7px;
+    cursor: pointer;
 }
 .main-cnt ul{
     position: absolute;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.199);
+    background-color: black;
     top: 0;
     opacity: 0;
     pointer-events: none;
-    cursor: pointer;
+    transition: all 0.8s ease;
 }
 .main-cnt ul:hover{
     opacity: 1;
 }
-.main-cnt .scrl:hover + ul{
+.main-cnt img:hover + ul{
     opacity: 1;
     pointer-events: all;
 }
-.main-cnt a:hover , span:hover{
-    text-decoration: underline;
-}
+
 .hour{
     position: absolute;
     top: 20px;
