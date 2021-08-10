@@ -340,6 +340,7 @@ main{
     grid-area: main;
     display: flex;
     flex-direction: column;
+    z-index: -2;
 }
 .story-grid{
     display: grid;
@@ -487,6 +488,7 @@ story{
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    border-radius: 10px;
 }
 .room-create{
     display: flex;
@@ -559,3 +561,63 @@ story{
     pointer-events: all;
 }
 
+/* ************* main--content*************** */
+
+.main-bdy-cnt{
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+.main-cnt{
+    margin: 20px;
+}
+.main-cnt-img{
+    position: relative;
+}
+.main-cnt a{
+    display: flex;
+    align-content: flex-start;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+}
+.main-cnt ul{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.199);
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+}
+.main-cnt ul:hover{
+    opacity: 1;
+}
+.main-cnt .scrl:hover + ul{
+    opacity: 1;
+    pointer-events: all;
+}
+.main-cnt a:hover , span:hover{
+    text-decoration: underline;
+}
+.hour{
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    color: rgba(99, 99, 99, 0.767);
+    font-size: smaller;
+}
+.scrl{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.main-txt-cnt{
+    margin: 15px 47px;
+}
