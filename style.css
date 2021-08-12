@@ -23,7 +23,8 @@ nav{
     padding: 1px;
     position: sticky;
     top: 0;
-    z-index: 3;
+    z-index: 1;
+    padding: 0;
 }
 .nav-container{
     display: flex;
@@ -235,8 +236,8 @@ section{
     display: flex;
     flex-direction: column;
     margin-top: 9%; 
+    overflow: hidden;
 }
-
 .right-heading h4{
     color: grey;
     margin-bottom: 20px;
@@ -300,6 +301,7 @@ section{
 
 
 /* *********online-freindes*************** */
+
 
 .online-freindes::after{
     content: '';
@@ -567,8 +569,8 @@ story{
 
 .main-bdy-cnt{
     margin-top: 20px;
-    background-color: white;
     border-radius: 10px;
+    background-color: white;
 }
 .main-cnt{
     margin: 20px;
@@ -620,5 +622,121 @@ story{
     margin-right: 10px;
 }
 .main-txt-cnt{
-    margin: 15px 47px;
+    margin: 15px 0;
+}
+.icon-main-cnt{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 7px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    padding-bottom: 8px;
+}
+.icon-main-cnt img{
+    width: 35px;
+}
+.heart{
+    position: absolute;
+    left: 22px;
+}
+.other-like{
+    position: absolute;
+    left: 65px;
+    top: 8px;
+    color: rgba(41, 41, 41, 0.767);
+    transition: all 0.4s ease-in-out;
+    text-decoration: none;
+}
+.other-like:hover{
+    text-decoration: underline;
+}
+.icon-cmnt{
+    margin-top: 7px;
+}
+.cmnt{
+    text-decoration: none;
+    color: rgba(41, 41, 41, 0.767);
+}
+.cmnt:hover{
+    text-decoration: underline;
+}
+
+.like-cmnt-main{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 8px;
+}
+.like-cmnt-main img{
+    width: 32px;
+    padding-right: 12px;
+}
+.like-icon{
+    position: relative;
+}
+.emoji{
+    display: flex;
+    background-color: white;
+    box-shadow: 1px 1px 4px 0px grey;
+    border-radius: 50px;
+    padding: 10px;
+    position: absolute;
+    top: -55px;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+.emoji img{
+    display: block;
+    object-fit: cover;
+    width: 35px;
+}
+.emoji:hover{
+    opacity: 1;
+    pointer-events: all;
+}
+.emoji img:hover{
+    transform: scale(1.5);
+}
+.like-icon a:hover + .emoji{
+    opacity: 1;
+    pointer-events: all;
+}
+.like-icon a:hover + .emoji img{
+    opacity: 1;
+    pointer-events: all;
+} 
+.like-icon a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(82, 82, 82);
+    padding: 2px 25px;
+}
+.like-icon:hover{
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+}
+.comments a{
+    display: flex;
+    align-items: center;
+    color: rgb(82, 82, 82);
+    text-decoration: none;
+    padding: 2px 25px;
+}
+.comments a:hover{
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+}
+.share a{
+    display: flex;
+    align-items: center;
+    color: rgb(82, 82, 82);
+    text-decoration: none;
+    padding: 2px 25px;
+}
+.share:hover{
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
 }
