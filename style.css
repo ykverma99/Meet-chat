@@ -212,6 +212,7 @@ aside{
     text-decoration: none;
     letter-spacing: 1px;
     color: black;
+    padding: 11px 18px;
 }
 .your-shortcut p{
     /* margin-right: 10px; */
@@ -220,11 +221,12 @@ aside{
     width: 25px;
     height: 25px;
     margin-left: 8px;
+    margin-right: 8px;
 }
 .your-shortcut a:hover{
     background-color: rgb(219, 219, 219);
     border-radius: 10px;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 
