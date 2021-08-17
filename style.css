@@ -21,17 +21,17 @@ body{
 nav{
     grid-area: nav;
     /* padding: 1px; */
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1;
     padding: 0;
+    width: 100%;
 }
 .nav-container{
     display: flex;
     justify-content: space-between;
     background-color: white;
 }
-
 /* left nav */
 .left-nav{
     display: flex;
@@ -47,11 +47,26 @@ nav{
     transition: all 0.4s ease;
     cursor: pointer;
     margin-left: 28px;
+
 }
 .left-nav img:hover{
     background-color: rgba(255, 4, 129, 0.466);
     box-shadow: 0px 1px 4px 1px grey;
     transform: rotate(360deg) scale(1.2) translate(-20%,-5%);
+}
+#se{
+    background-color: transparent;
+    transform: none;
+    opacity: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(230, 230, 230);
+    border-radius: 50%;
+}
+#se:hover{
+    box-shadow: none;
+    transform: none;
 }
 .left-nav input{
     border: 0px solid grey;
@@ -150,7 +165,9 @@ nav{
     top: 0;
     left: 30px;
 }
-
+.line-menu{
+    opacity: 0 ;
+}
 
 
 /* ********side-bar********** */
@@ -158,8 +175,9 @@ nav{
 aside{
     grid-area: side;
     padding: 0 10px;
-    position: fixed;
-    top: 8%;
+   position: fixed;
+   top: 8%;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
 }
@@ -273,7 +291,6 @@ section{
     border-radius: 10px;
     background-color: rgb(219, 219, 219);
 }
-
 
 
 /* **************contact-list************** */
@@ -736,4 +753,42 @@ story{
 .share:hover{
     background-color: rgb(238, 238, 238);
     border-radius: 10px;
+}
+
+
+@media screen and (max-width: 1320px){
+    .left-nav{
+        padding: 10px 5px;
+    }
+    .left-nav input{
+        visibility: hidden;
+        width: 0;
+        padding: 0;
+    }
+    #se{
+        background-color: transparent;
+        transform: none;
+        opacity: 1;
+        width: 38px;
+        margin-left: 15px;
+        background-color: rgb(230, 230, 230);
+        border-radius: 50%;
+    }
+    aside{
+        opacity: 0;
+        width: 0;
+        padding: 0;
+        margin: 0;
+    }
+    .profile{
+        opacity: 0;
+    }
+    .line-menu{
+        opacity: 1;
+        margin-right: 25px;
+    }
+    main{
+        margin-left: 0;
+    }
+
 }
