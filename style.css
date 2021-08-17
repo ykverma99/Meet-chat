@@ -775,20 +775,26 @@ story{
         border-radius: 50%;
     }
     aside{
+        width: 0vw;
+    }
+    .profile{
         opacity: 0;
         width: 0;
         padding: 0;
         margin: 0;
     }
-    .profile{
-        opacity: 0;
-    }
-    .line-menu{
-        opacity: 1;
-        margin-right: 25px;
-    }
     main{
-        margin-left: 0;
+        
     }
 
+}
+
+@media screen and (max-width:1150px){
+    .line{
+        opacity: 1;
+        margin-right: 45px;
+    }
+    section{
+        width: 100%;
+    }
 }
