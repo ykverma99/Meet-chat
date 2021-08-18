@@ -7,6 +7,9 @@ body{
     box-sizing: border-box;
     background-color: rgb(240, 240, 240);
 }
+.color-black{
+     background-color: black;
+}
 .container{
     display: grid;
     grid-template-columns: 1fr  3fr 1fr;
@@ -384,9 +387,6 @@ main{
     position: relative;
     cursor: pointer;
 }
-story{
-    grid-area: upload;
-}
 .story-pic img{
     display: block;
     width: 115px;
@@ -438,6 +438,10 @@ story{
     opacity: 1;
     pointer-events: all;
     transform: translateY(0);
+}
+.hide{
+    opacity: 0;
+    height: 0;
 }
 
 
@@ -807,8 +811,7 @@ story{
 
 @media screen and (max-width:1150px){
     .center-nav{
-        margin-right: 5rem;
-        transition: 0.5s ease;
+        margin-right: 7rem;
     }
     .center-nav img{
         padding: 0 30px;
@@ -837,4 +840,19 @@ story{
         margin-right: 1rem;
         margin-left: 2rem;
     }
+    .story-grid{
+        display: grid;
+        grid-template-columns: repeat(5,2fr);
+        grid-template-rows: 1fr;
+    }
+    .hide{
+        opacity: 1;
+        height: 175px;
+    }
+    .width1{
+        width: 100%;
+        object-fit: cover;
+    }
+
+
 } 
