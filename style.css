@@ -117,6 +117,7 @@ nav{
     justify-content: center;
     align-items: center;
     margin-right: 15px;
+    position: relative;
 }
 .right-nav img{
     width: 27px;
@@ -125,10 +126,9 @@ nav{
 }
 #menu{
     width: 21px;
+    transition: 0s ;
 }
-#menu:hover{
-    box-shadow: -1px 1px 4px 2px rgb();
-}
+
 #noti{
     width: 40px;
 }
@@ -165,8 +165,20 @@ nav{
     top: 0;
     left: 30px;
 }
-.line-menu{
-    opacity: 0 ;
+.plus{
+    position: absolute;
+    right: 150px;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+.line{
+    opacity: 0;
+    cursor: none;
+    pointer-events: none;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    transition: 0.5s ease;
 }
 
 
@@ -775,7 +787,9 @@ story{
         border-radius: 50%;
     }
     aside{
-        width: 0vw;
+        width: 0;
+        margin: 0;
+        padding: 0;
     }
     .profile{
         opacity: 0;
@@ -783,18 +797,44 @@ story{
         padding: 0;
         margin: 0;
     }
-    main{
-        
+    section{
+        width: 250px;
+        margin-right: 2rem;
+        margin-left: 8rem;
     }
 
 }
 
 @media screen and (max-width:1150px){
+    .center-nav{
+        margin-right: 5rem;
+        transition: 0.5s ease;
+    }
+    .center-nav img{
+        padding: 0 30px;
+        transition: 0.5s ease;
+    }
     .line{
         opacity: 1;
-        margin-right: 45px;
+        width: 28px;
+        margin-right: 86px;
+    }
+    .plus{
+        opacity: 1;
+        
+    }
+    .message{
+        margin-left: 20px;
+    }
+    #menu{
+        opacity: 1;
+        width: 0;
+        margin: 0;
+        padding: 0;
     }
     section{
-        width: 100%;
+        width: 250px;
+        margin-right: 1rem;
+        margin-left: 2rem;
     }
-}
+} 
