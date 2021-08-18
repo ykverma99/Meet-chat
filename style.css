@@ -190,8 +190,8 @@ nav{
 aside{
     grid-area: side;
     padding: 0 10px;
-   position: fixed;
-   top: 8%;
+    position: fixed;
+    top: 8%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -791,9 +791,10 @@ main{
         border-radius: 50%;
     }
     aside{
-        width: 0;
+        /* width: 0;
         margin: 0;
-        padding: 0;
+        padding: 0; */
+        opacity: 0;
     }
     .profile{
         opacity: 0;
@@ -828,6 +829,7 @@ main{
     }
     .message{
         margin-left: 20px;
+        cursor: none;
     }
     #menu{
         opacity: 1;
@@ -853,6 +855,110 @@ main{
         width: 100%;
         object-fit: cover;
     }
-
+    .right-nav img{
+        padding: 0 5px;
+    }
 
 } 
+@media screen and (max-width:1000px) {
+    .center-nav{
+        margin-right: 5rem;
+    }
+    .center-nav img{
+        padding: 0 20px;
+    }
+    .right-nav img{
+        padding: 0 10px;
+    }
+    .line{
+        margin-right: 65px;
+    }
+}
+@media screen and (max-width:950px) {
+    .center-nav{
+        margin-right: 4rem;
+    }
+    .center-nav img{
+        padding: 0 18px;
+    }
+    .right-nav img{
+        padding: 0 8px;
+    }
+    .line{
+        margin-right: 45px;
+    }
+}
+@media screen and (max-width:850px) {
+    .center-nav{
+        margin-left:-50px;
+    }
+    .center-nav img{
+        padding: 0 15px;
+    }
+    .right-nav img{
+        padding: 0 5px;
+    }
+    .line{
+        margin-left: -45px;
+    }
+    .plus{
+        margin-right: -30px;
+    }
+}
+@media screen and (max-width:750px) {
+    .center-nav{
+        margin-left:-35px;
+    }
+    .center-nav img{
+        padding: 0 15px;
+    }
+    .right-nav img{
+        padding: 0 5px;
+    }
+    .line{
+        margin-left: -25px;
+    }
+}
+@media screen and (max-width:725px) {
+    .center-nav{
+        opacity: 0;
+    }
+    .right-nav img{
+        padding: 0 3.5px;
+    }
+    .line{
+        opacity: 0;
+    }
+    section{
+        opacity: 0;
+        
+    }
+}
+@media screen and (max-width:715px) {
+    .right-nav{
+        margin-left: -35px;
+    }
+    .right-nav img{
+        padding: 0 8px;
+    }
+    .plus{
+        margin-right: -5px;
+    }
+}
+@media screen and (max-width:685px) {
+    .right-nav{
+        margin-left: -80px;
+    }
+}
+/* @media screen and (max-width:500px) {
+    .center-nav img{
+        opacity: 0;
+        width: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .line{
+        width: 28px;
+    }
+
+} */
