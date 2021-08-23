@@ -443,6 +443,10 @@ main{
     opacity: 0;
     height: 0;
 }
+.hideing{
+    opacity: 0;
+    height: 0;
+}
 
 
 /* ************** feelings************** */
@@ -780,6 +784,8 @@ main{
         visibility: hidden;
         width: 0;
         padding: 0;
+        pointer-events: none;
+        cursor: none;
     }
     #se{
         background-color: transparent;
@@ -795,12 +801,16 @@ main{
         margin: 0;
         padding: 0; */
         opacity: 0;
+        pointer-events: none;
+        cursor: none;
     }
     .profile{
         opacity: 0;
         width: 0;
         padding: 0;
         margin: 0;
+        pointer-events: none;
+        cursor: none;
     }
     section{
         width: 250px;
@@ -836,6 +846,8 @@ main{
         width: 0;
         margin: 0;
         padding: 0;
+        pointer-events: none;
+        cursor: none;
     }
     section{
         width: 250px;
@@ -844,10 +856,14 @@ main{
     }
     .story-grid{
         display: grid;
-        grid-template-columns: repeat(5,2fr);
+        grid-template-columns: repeat(6,2fr);
         grid-template-rows: 1fr;
     }
     .hide{
+        opacity: 1;
+        height: 175px;
+    }
+    .hideing{
         opacity: 1;
         height: 175px;
     }
@@ -873,6 +889,12 @@ main{
     .line{
         margin-right: 65px;
     }
+    .story-grid{
+        display: grid;
+        grid-template-columns: repeat(6,2fr);
+        grid-template-rows: 1fr;
+    }
+    
 }
 @media screen and (max-width:950px) {
     .center-nav{
@@ -886,6 +908,19 @@ main{
     }
     .line{
         margin-right: 45px;
+    }
+    main{
+        width: 100%;
+    }
+    section{
+        opacity: 0;
+        pointer-events: none;
+        cursor: none;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+        
     }
 }
 @media screen and (max-width:850px) {
@@ -904,6 +939,17 @@ main{
     .plus{
         margin-right: -30px;
     }
+    section{
+        opacity: 0;
+        pointer-events: none;
+        cursor: none;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+        
+    }
+    
 }
 @media screen and (max-width:750px) {
     .center-nav{
@@ -918,10 +964,33 @@ main{
     .line{
         margin-left: -25px;
     }
+    section{
+        opacity: 0;
+        pointer-events: none;
+        cursor: none;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+        
+    }
+    .story-grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 1fr;
+    }
+    .hide, .hideing{
+        opacity: 0;
+        height: 0;
+    }
+    
 }
 @media screen and (max-width:725px) {
+   
     .center-nav{
         opacity: 0;
+        pointer-events: none;
+        cursor: none;
     }
     .right-nav img{
         padding: 0 3.5px;
@@ -931,6 +1000,8 @@ main{
     }
     section{
         opacity: 0;
+        pointer-events: none;
+        cursor: none;
         
     }
 }
@@ -961,4 +1032,9 @@ main{
         width: 28px;
     }
 
+} */
+/* @media screen and (max-width: 650px0) {
+    main{
+        width: 100vw;
+    }
 } */
