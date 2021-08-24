@@ -775,6 +775,8 @@ main{
     border-radius: 10px;
 }
 
+/* ********* media-query********* */
+/* ********responsive************* */
 
 @media screen and (max-width: 1320px){
     .left-nav{
